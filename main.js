@@ -13,17 +13,37 @@ for(let i=0; i<101; i++){
     alert(Eres la persona numero '+ i + ' en ingresar a la pagina')
 }
 
-let precioGranulado = 600
-let precioPulverizado = 750 
+let precioGranulado = 450
+let precioPulverizado = 650 
 
-const SUMA = function(a+b+c){return a + b+ c}
 function sumaProductos(a,b){
-    let total = a+b
-    return total
+    return a+b 
 }
+    let resultado= sumaProductos(precioGranulado, precioPulverizado )
+    console.log(resultado)
 
 function mostrarTotal (total){
     alert('El costo de los productos seleccionados es '+total)
 }
-//INSERTAR UN SWITCH COMO MENU PARA QUE SELECCIONENLO QUE QUIEREN y al final les haga la suma y les arroje el total 
-//idea: menu que calcule el total a pagar del cliente respecto a los articulos que selecciono
+    console.log(mostrarTotal)
+
+let opciones = 
+do{
+    opciones = parseInt(prompt('Elige el producto que deseas adquirir: \n1.-Caucho Granulado \n2.-Caucho Pulverizado \n3.-Salir'))
+
+switch (opciones){
+    case 1:
+        alert('Caucho Granulado')
+        break;
+    case 2: 
+        alert('Caucho Pulverizado')
+        break;
+    case 3:
+        alert('Salir')
+        break;
+    default: 
+        alert('Opción inválida')
+}
+}
+
+//idea: menu que calcule el total a pagar del cliente respecto a los articulos que seleccionó
