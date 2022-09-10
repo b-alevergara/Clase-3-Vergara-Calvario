@@ -10,7 +10,7 @@ console.log(nombre)
 console.log(edad)
 
 for(let i=0; i<101; i++){
-    alert(Eres la persona numero '+ i + ' en ingresar a la pagina')
+    alert('Eres la persona numero '+ i + ' en ingresar a la pagina')
 }
 
 let precioGranulado = 450
@@ -25,25 +25,27 @@ function sumaProductos(a,b){
 function mostrarTotal (total){
     alert('El costo de los productos seleccionados es '+total)
 }
-    console.log(mostrarTotal)
+    console.log(mostrarTotal('$1,100'))
 
-let opciones = 
+let opciones 
 do{
     opciones = parseInt(prompt('Elige el producto que deseas adquirir: \n1.-Caucho Granulado \n2.-Caucho Pulverizado \n3.-Salir'))
+    while(opciones != '3' ){
+        switch (opciones){
+            case 1:
+                alert('Caucho Granulado')
+                break;
+            case 2: 
+                alert('Caucho Pulverizado')
+                break;
+            case 3:
+                alert('Salir')
+                break;
+            default: 
+                alert('Opción inválida')
+}
+}    
+}
 
-switch (opciones){
-    case 1:
-        alert('Caucho Granulado')
-        break;
-    case 2: 
-        alert('Caucho Pulverizado')
-        break;
-    case 3:
-        alert('Salir')
-        break;
-    default: 
-        alert('Opción inválida')
-}
-}
 
 //idea: menu que calcule el total a pagar del cliente respecto a los articulos que seleccionó
